@@ -5,18 +5,18 @@ module.exports = function createDreamTeam(members) {
   if(arguments.length === 0 ||members===null|| typeof(members) !== "object" || members.length == 0  || typeof(members[0]) !== "string" ) return false;
 let arr = [];
 let g;
+let k = 0;
 for(i in members){
+  if(arguments.length === 0 ||members[i]===null|| typeof(members) !== "object" || members.length == 0  || typeof(members[i]) !== "string" ) continue;
   for(let j = 0;j<members[i].split('').length;j++){
- 
-    if(members[i].substring(j,j+1)==' '){
-      
-      continue;
+     if(members[i].substring(j,j+1)==' '){
+        continue;
     }
-    
     g = j;
     break;
   }
-  arr[i]=members[i].substring(g,g+1);
+  arr[k]=members[i].substring(g,g+1);
+  k++;
 }
 arr.sort();
 return arr.join('').toUpperCase();
