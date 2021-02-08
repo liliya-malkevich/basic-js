@@ -2,11 +2,10 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = function countCats(matrix) {
   // remove line with error and write your code here
-  let n = matrix.length;
-  let m = matrix[0].length;
+ if(arguments.length===0 || matrix.length == 0) return 0;
   let count = 0;
-  for(let i = 0;i<n;i++){
-    for(let j = 0;j<m;j++){
+  for(i in matrix){
+    for(j in matrix[i]){
 if(matrix[i][j] === '^^') count ++;
     }
   }
