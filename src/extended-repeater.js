@@ -6,10 +6,10 @@ module.exports = function repeater( str, options ) {
   str = String(str);
   options.addition = String(options.addition);
   if(options.repeatTimes === undefined) options.repeatTimes = 1;
-  if(options.additionRepeatTimes === undefined) options.additionRepeatTimes =0;
+  if(options.additionRepeatTimes === undefined) options.additionRepeatTimes =1;
   
   if(options.separator === undefined) options.separator = '+';
-  if(options.addition == undefined){
+  if(options.addition === 'undefined'){
   options.addition = '';
   options.additionRepeatTimes = 0;
   }
