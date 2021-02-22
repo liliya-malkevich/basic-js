@@ -2,7 +2,7 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = function createDreamTeam(members) {
   // remove line with error and write your code here
-  if(arguments.length === 0 ||members===null|| typeof(members) !== "object" || members.length == 0  || typeof(members[0]) !== "string" ) return false;
+  if(arguments.length === 0 ||members===null|| typeof(members) !== "object" || members.length == 0 || !Array.isArray(members) ) return false;
 let arr = [];
 let g;
 let k = 0;
@@ -18,7 +18,22 @@ for(i in members){
   arr[k]=members[i].substring(g,g+1);
   k++;
 }
-arr.sort();
-return arr.join('').toUpperCase();
-};
+//arr.sort();
 
+arr = arr.join('').toUpperCase();
+arr = arr.split('');
+return arr.sort().join('');
+};
+// console.log(createDreamTeam([
+//   ['David Abram'],
+//   ['Robin Attfield'],
+//   'Thomas Berry',
+//   ['Paul R.Ehrlich'],
+//   'donna Haraway',
+//   ' BrIaN_gOodWiN  ',
+//   {
+//     0: 'Serenella Iovino'
+//   },
+//   'Erazim Kohak',
+//   '  val_plumwood',
+// ]))
