@@ -29,5 +29,5 @@ if(j !== options.additionRepeatTimes-1) myStr+= options.additionSeparator;
   
 return myStr;
 };
-//console.log(repeater('TESTstr', { repeatTimes: undefined, separator: 'ds', addition: 'ADD!', additionRepeatTimes: undefined, additionSeparator: ')))000' }))
+//console.log(repeater('TESTstr', { separator: 'ds', addition: 'ADD!', additionSeparator: ')))000' }));
   

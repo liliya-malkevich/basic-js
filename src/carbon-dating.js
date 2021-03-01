@@ -13,7 +13,7 @@ module.exports = function dateSample(sampleActivity) {
   sampleActivity = Number(sampleActivity);
   let k = 0.693/HALF_LIFE_PERIOD;
   let t = Math.log(MODERN_ACTIVITY/sampleActivity)/k;
-  return Math.floor(t);
+  return Math.ceil(t);
 };
 //console.log(dateSample('1.1'));
 
